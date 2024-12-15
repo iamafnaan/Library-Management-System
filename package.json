@@ -1,8 +1,9 @@
 {
-  "name": "Library Management Sytem",
+  "name": "library-management-sytem",
   "version": "1.0.0",
   "description": "Backend system for Library Management",
   "main": "app.js",
+  "type":"commonjs",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
