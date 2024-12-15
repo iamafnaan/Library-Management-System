@@ -90,7 +90,7 @@ exports.updateBook = async (req, res) => {
     }
 
     // Ensure only the author can update
-    if (book.author.toString() !== req.user._id.toString()) {
+    if (book.author._id.toString() !== req.user._id.toString()) {
       return res.status(403).json({
         status: 'fail',
         message: 'You are not authorized to update this book'
@@ -128,7 +128,7 @@ exports.deleteBook = async (req, res) => {
     }
 
     // Ensure only the author can delete
-    if (book.author.toString() !== req.user._id.toString()) {
+    if (book.author._id.toString() !== req.user._id.toString()) {
       return res.status(403).json({
         status: 'fail',
         message: 'You are not authorized to delete this book'
